@@ -1,0 +1,20 @@
+[package]
+name = "leptos-basic-template"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+leptos = { version = "0.8.17", features = ["csr"] }
+console_error_panic_hook = "0.1"
+wasm-bindgen = "0.2.116"
+
+[features]
+default = ["csr"]
+csr = ["leptos/csr"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[package.metadata.leptos]
+output-name = "leptos-basic-template"
+site-root = "dist"
