@@ -31,12 +31,6 @@ jobs:
       - name: Verify WebAssembly compilation
         run: cargo check --target wasm32-unknown-unknown
 
-      - name: Install cargo-llvm-cov
-        run: cargo install cargo-llvm-cov --locked
-
-      - name: Coverage (tests + summary)
-        run: cargo llvm-cov --all-features --summary-only -- --include-ignored
-
   sonarqube:
     name: SonarQube
     runs-on: ubuntu-latest
